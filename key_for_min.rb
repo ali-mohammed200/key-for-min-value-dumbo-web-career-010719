@@ -4,10 +4,7 @@
 def key_for_min_value(name_hash)
   minkey = nil
   name_hash.map { |key, val|
-    if (minkey == nil)
-      minkey = key
-    end
-    if (name_hash[key] < name_hash[minkey])
+    if (minkey == nil) ||(name_hash[key] < name_hash[minkey])
       minkey = key;
     end
    }
